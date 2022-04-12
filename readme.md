@@ -1,3 +1,9 @@
+[ERD]
+
+![recruit](https://user-images.githubusercontent.com/37106871/162945752-8aa63b17-d103-4d13-b94d-da98fbbd61b1.png)
+
+
+
 [등록 이력서 관리 ] 
 
 ![image](https://user-images.githubusercontent.com/37106871/162941479-0206490e-1f6e-48a1-8c1e-92b438c8ccc9.png)
