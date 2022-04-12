@@ -1,0 +1,184 @@
+.left-container{
+    position: relative;
+    top: 30px;
+    border: 1px solid black;
+    float: left;
+}
+.mid-container{
+    position: relative;
+    top: 30px;
+    left: 160px;
+    width: 1000px;
+    padding: 0px;
+    border: 1px solid black;
+}
+nav{
+    display: inline-block;
+}
+nav ul {
+    background-color: darkorange;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+    display: block;
+}
+
+
+.dropdown-menu{
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.dropdown-content{
+    background-color: #f9f9f9;
+}
+.dropdown-content a{
+    text-decoration: none;
+    display: block;
+    padding: 12px 16px;
+}
+.basic_info{
+    position: relative;
+    border: 1px solid rgb(248, 245, 245);
+    height: 100%;
+    margin: 30px 30px 200px 30px;
+    background-color: #fbfbfb;
+    float: left;
+    border: 1px solid black;
+}
+
+.img{
+    float: left;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+}
+
+.img ul li{
+    list-style-type: none;
+    display: inline;
+    
+}
+.img ul li input{
+    margin-left: 20px;
+    height: 25px;
+    border: none;
+    float: right;
+}
+.img ul li button{
+   width: 200px;
+   height: 40px;
+   border-radius: 20px;
+   border: none;
+   font-weight: bold;
+   background-color: blanchedalmond;
+}
+.img ul li button:hover{
+    background-color: lightblue;
+}
+
+.user_info{
+    width: 80%;
+    height: 80%;
+    margin: 20px;
+    
+    border: 1px solid red;
+}
+.basic_left{
+    float: left;
+}
+.basic_right ul{
+    list-style-type: none;
+}
+
+.basic_info_certificate{
+    border: 1px solid red;
+}
+.self_introduce{
+    margin-top: 10px;
+    border: 1px solid red;
+}
+.spec_info{
+    clear: left;
+}
+
+
+.spec_info ul li{
+    list-style-type: none;
+    display: inline;
+    
+}
+.spec_info{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid rgb(207, 202, 202);
+}
+.spec_info ul li input{
+    height: 25px;
+    float: right;
+}
+.spec_info ul li button{
+   width: 200px;
+   height: 40px;
+   border-radius: 20px;
+   border: none;
+   font-weight: bold;
+   background-color: blanchedalmond;
+}
+.spec_info ul li button:hover{
+    background-color: lightblue;
+}
+.spec_info ul li select{
+    margin-left: 20px;
+    height: 25px;
+    width: 180px;
+    float: right;
+}
+.addBtn{
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: blue;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+}
+.minBtn{
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+}
+#enrollTitle{
+    width: 600px;
+    height: 40px;
+    font-size: 20px;
+}
+.new{
+    height: 30px;
+    width: 80px;
+    background-color: #aaa1a1;
+    border: none;
+    font-weight: bold;
+    color: white;
+}
+.new:hover{
+    background-color: blue;
+}
+.old{
+    height: 30px;
+    width: 80px;
+    background-color: #aaa1a1;
+    border: none;
+    font-weight: bold;
+    color: white;
+}
+.old:active{
+
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.recruit.mapper.TestMapper">
+    <select id="findAll" resultType="com.example.recruit.domain.User">
+        select * from user
+        <if test="user_no = 13">
+            where user_no = 12
+        </if>
+    </select>
+
+    <update id="updateEnroll" parameterType="com.example.recruit.domain.Enroll">
+        UPDATE enroll
+        <set>
+            <if test="#{e.enrollTitle} != null">
+                enroll_title = #{e.enrollTitle}
+            </if>
+            <if test="#{e.enrollTitle} != null">
+                enroll_title = #{e.enrollTitle}
+            </if>
+            <if test="#{e.enrollTitle} != null">
+                enroll_title = #{e.enrollTitle}
+            </if>
+            <if test="#{e.enrollTitle} != null">
+                enroll_title = #{e.enrollTitle}
+            </if>
+            <if test="#{e.enrollTitle} != null">
+                enroll_title = #{e.enrollTitle}
+            </if>
+        </set>
+        WHERE
+        enroll_id= #{e.enrollId}
+    </update>
+
+</mapper>
+
+

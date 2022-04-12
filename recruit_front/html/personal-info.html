@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/personal-info.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-container">
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <div class="dropdown-menu">이력서</div>
+                        <div class="dropdown-content">
+                            <a href="personal-info.html">이력서 등록</a>
+                            <a href="resume-manage.html">이력서 관리</a>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <div class="dropdown-menu">지원내역</div>
+                        <div class="dropdown-content">
+                            <a href="#">입사지원 현황</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mid-container">
+            <h2>기본정보</h2>
+            <div class="basic_info">
+                <div class="img">
+                    
+                        <ul>
+                            <li><b>이름</b></li>
+                            <li><input id="name" type="text"></li>
+                        </ul>
+                        <ul>
+                            <li><b>생년월일</b><b></b></li>
+                            <li><input id="birth" type="text"></li>
+                        </ul>
+                        <ul>
+                            <li><b>이메일</b></li>
+                            <li><input id="email" type="text"></li>
+                        </ul>
+                        <ul>
+                            <li><b>휴대폰</b></li>
+                            <li><input id="phoneNum" type="text"></li>
+                        </ul>
+                        <ul>
+                            <li><b>전화번호</b></li>
+                            <li><input id="homeNum" type="text"></li>
+                        </ul>
+                        <ul>
+                            <li><b>주소</b></li>
+                            <li><input id="address" type="text"></li>
+                        </ul>
+                        <ul>
+                            <li><b>성별</b></li>
+                            <li>
+                                <select id="gender" name="sex" id="sex">
+                                    <option value="m">남</option>
+                                    <option value="f">여</option>
+                                </select>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li><b>증명사진</b></li>
+                            <li>
+                                <form>
+                                    <input type="file" id="upload_file" name="upload_file" onchange="imageSend(this.form)">      
+                                </form>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <button id="send" onclick="sendBasicInfo()">등록하기</button>
+                            </li>
+                        </ul>
+              
+                    
+                </div>
+                <img id="profile" src="../img/test.png" width="150px" height="150px" alt="">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="../javascript/personal-resume.js"></script>
+</body>
+
+</html>

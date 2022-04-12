@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/home/uploadfiles" method="post" enctype="multipart/form-data">
+        이름<input type="text"><br>
+        생년월일<input type="text"><br>
+        이메일<input type="text"><br>
+        휴대폰<input type="text"><br>
+        전화번호<input type="text"><br>
+        주소<input type="text"><br>
+        성별<select name="sex" id="sex">
+            <option value="m">남</option>
+            <option value="f">여</option>
+        </select>
+        파일명 : <input type="file" name="myfile">
+        <button type="submit">제출하기</button>
+    </form>
+</body>
+</html>

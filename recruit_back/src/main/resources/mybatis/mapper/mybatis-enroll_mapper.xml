@@ -1,0 +1,83 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.recruit.mapper.EnrollMapper">
+
+    <update id="updateEnroll">
+        UPDATE enroll
+        <set>
+            <if test = "e.enrollTitle != null">
+                enroll_title = #{e.enrollTitle},
+            </if>
+            <if test ="e.enrollContent != null">
+                enroll_content = #{e.enrollContent}
+            </if>
+        </set>
+        WHERE
+        enroll_id= #{enrollId}
+    </update>
+
+    <update id="updateDegree">
+        UPDATE degree
+        <set>
+            <if test = "d.degreeType != null">
+                degree_type = #{d.degreeType},
+            </if>
+            <if test ="d.degreeName != null">
+                degree_name = #{d.degreeName},
+            </if>
+            <if test ="d.degreeRegion != null">
+                degree_region = #{d.degreeRegion},
+            </if>
+            <if test ="d.degreeStartDate != null">
+                degree_start_date = #{d.degreeStartDate},
+            </if>
+            <if test ="d.degreeEndDate != null">
+                degree_end_date = #{d.degreeEndDate},
+            </if>
+            <if test ="d.degreeMajor != null">
+                degree_major = #{d.degreeMajor},
+            </if>
+            <if test ="d.degreeScore != null">
+                degree_score = #{d.degreeScore},
+            </if>
+            <if test ="d.isGraduate != null">
+                is_graduate = #{d.isGraduate}
+            </if>
+        </set>
+        WHERE
+        enroll_id= #{d.enrollId} and degree_id = #{d.degreeId}
+    </update>
+
+    <update id="updateCertificate">
+        UPDATE certificate
+        <set>
+            <if test="c.certType != null">
+                cert_type = #{c.certType},
+            </if>
+            <if test="c.certName != null">
+                cert_name = #{c.certName},
+            </if>
+            <if test="c.certDate != null">
+                cert_date = #{c.certDate}
+            </if>
+        </set>
+        where enroll_id = #{c.enrollId} and cert_id = #{c.certId}
+    </update>
+
+    <update id="updateResumePublic">
+        UPDATE enroll
+        <set>
+            <if test="isPublic == true">
+                is_public = true,
+            </if>
+            <if test="isPublic == false">
+                is_public = false
+            </if>
+        </set>
+        where enroll_id = #{enrollId}
+    </update>
+
+</mapper>
+
+

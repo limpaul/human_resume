@@ -1,0 +1,139 @@
+use recruit_db;
+create table user(
+	user_no integer auto_increment,
+    user_id varchar(20),
+    user_pw varchar(20),
+    user_email varchar(20),
+    username varchar(20),
+    primary key(user_no)
+);
+
+create table bbs(
+	bbs_id integer auto_increment,
+    bbs_title varchar(128),
+    bbs_content varchar(255),
+    bbs_pw varchar(20),
+    bbs_writer_id integer,
+    bbs_writer varchar(20),
+    bbs_like integer default 0,
+    bbs_read integer default 0,
+    bbs_date date default (current_date),
+    primary key(bbs_id),
+    foreign key(bbs_writer_id) references user(user_no)
+    on delete cascade
+    on update cascade
+);
+
+create table review(
+	review_id integer auto_increment,
+    user_id integer,
+    review_writer varchar(20),
+    bbs_id integer,
+    review_content varchar(255),
+    review_pw varchar(20),
+    review_date date default (current_date),
+    primary key(review_id),
+    foreign key(user_id) references user(user_no)
+	on delete cascade,
+    foreign key(bbs_id) references bbs(bbs_id)
+	on delete cascade
+);
+
+create table enroll(
+	enroll_id int auto_increment,
+    enroll_title varchar(128) not null,
+    enroll_content text,
+    type_of_job bigint,
+    hope_salary int default 0,
+    hope_region int default 0,
+    is_new_comer tinyint default true,
+    is_public tinyint,
+    user_no integer,
+    primary key(enroll_id),
+    foreign key(user_no) references user(user_no)
+    on delete cascade
+);
+
+create table degree(
+    degree_id int auto_increment,
+    enroll_id int,
+    degree_type int check(degree_type in(0, 2, 3, 4, 6, 8)),
+    degree_name varchar(50),
+    degree_region int,
+    degree_start_date date,
+    degree_end_date date,
+    degree_major varchar(20),
+    degree_score float check (degree_score <= 4.5),
+    is_graduate int not null check (is_graduate in(1, 2, 3, 4)),
+    primary key(degree_id),
+    foreign key(enroll_id) references enroll(enroll_id)
+    on delete cascade
+    on update cascade
+);
+
+
+
+create table certificate(
+	cert_id int auto_increment,
+    enroll_id int,
+    cert_type varchar(50),
+    cert_name varchar(50),
+    cert_date date,
+    primary key(cert_id),
+    foreign key(enroll_id) references enroll(enroll_id)
+    on delete cascade
+);
+drop table basic_info;
+create table basic_info(
+	basic_id integer auto_increment,
+    img_name varchar(64),
+    name varchar(20),
+    gender char check(gender in('m', 'f')),
+    birth date,
+    email varchar(20),
+    phone_num varchar(20),
+    home_num varchar(20),
+    address varchar(255),
+    user_no integer,
+    primary key(basic_id),
+    foreign key(user_no) references user(user_no)
+    on delete cascade
+);
+
+DELIMITER //
+create procedure basic_iu(img_name varchar(20), name varchar(20),
+gender char, birth date, email varchar(20), phone_num varchar(20), home_num varchar(20),
+address varchar(128), user_no int)
+begin
+	if(select b.user_no = user_no from basic_info as b where b.user_no = user_no) then
+		update basic_info as b
+        set b.img_name = img_name, b.name = name,
+        b.gender = b.gender, b.birth = birth,
+        b.email = email, b.phone_num = phone_num,
+        b.home_num = home_num, b.address = address
+        where b.user_no = user_no;
+	else
+		insert into basic_info(img_name, name, gender, birth, email, phone_num, home_num, address, user_no)
+        values (img_name, name, gender, birth, email, phone_num, home_num, address, user_no);
+	end if;
+end //
+DELIMITER ;
+
+create table career(
+	career_id int auto_increment,
+    start_date date,
+    end_date date,
+    company_name varchar(20),
+    position varchar(20),
+    department varchar(20),
+    region int,
+    salary int,
+    task varchar(255),
+    enroll_id Integer,
+    primary key(career_id),
+    foreign key(enroll_id) references enroll(enroll_id)
+    on delete cascade
+);
+drop table career;
+
+

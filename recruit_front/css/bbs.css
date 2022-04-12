@@ -1,0 +1,50 @@
+
+.body{
+    margin-left: 30%;
+    width: 40%;
+    height: 100%;
+    border: 1px solid black;
+}
+.bbs_form{
+    margin-top: 15%;
+    margin-left: 20%;
+}
+.bbs_form input[type='text']{
+    height: 35px;
+    width: 440px;
+    margin-bottom: 20px;
+}
+.bbs_form input[type='radio']{
+    margin-left: 10px;
+}
+.bbs_form button{
+    margin: 2px;
+    height: 40px;
+    width: 308px;
+    background-color: #29367c;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.bbs_form a{
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.review_form ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 2px 0px 2px 0px;
+    border-bottom: 1px solid black;
+}
+.review_form li:nth-child(1){
+    margin-left: 10px;
+}
+.review_form li:nth-child(2){
+    margin-left: 10px;
+}
+.review_form li:nth-child(3){
+    margin-left: 10px;
+   font-size: 10px;
+}
+

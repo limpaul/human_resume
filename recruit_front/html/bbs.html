@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bbs.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+
+        </div>
+        <div class="body">
+            <div class="bbs_form">
+                <p>게시글 번호 </p>
+                <p>작성자 </p>
+                <input type="text"><br/>
+                <textarea name="bbs_content" id="bbs_content" cols="61" rows="10" ></textarea>
+              
+            </div>
+            <div class="review_form_2">
+                <div class="review_div">
+                    <p>댓글</p>
+                    <div class="review_form">
+                        <ul>
+                            <li>
+                                <textarea id="review_content" name="#" id="#" cols="45" rows="5" placeholder="내용"></textarea><br/>
+                                <input id="review_pw" type="password" name="reviewPassword" placeholder="비밀번호" />                     
+                                <button onclick="sendReviewForm()">등록</button>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <button>이전 글</button>
+            <button>다음 글</button>
+            <button onclick="location.href='community.html'">글 목록</button>
+            <button onclick="setEditBbs()">글 수정</button>
+            <button onclick="setRemoveBbs()">글 삭제</button>
+        </div>
+        <div class="bottom">
+          
+        </div>
+    </div>
+    <script src="../javascript/bbs.js"></script>
+</body>
+</html>

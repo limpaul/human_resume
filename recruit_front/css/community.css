@@ -1,0 +1,113 @@
+.container{
+    padding: 0px;
+    margin: 0px;
+}
+.top_list{
+    padding: 0px 0px 79px 0px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.top_list li{
+    float: left;
+    list-style-type: none;
+    display: block;
+}
+.top_list a{
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 25px 100px 25px 100px;
+    text-decoration: none;
+}
+.top_list a:hover{
+    background-color: bisque;
+}
+.content_list button:hover{
+    background-color: rgb(81, 128, 209);
+    color: white;
+    font-weight: bold;
+}
+.mid{
+    padding: 100px 0px 0px 50px;
+    /*border: 1px solid black;*/
+    height: 500px;
+}
+.table_div{
+    border-bottom: 1px solid black;
+}
+.content_list table tr th:nth-child(2){
+    padding: 0px 200px 0px 200px;
+}
+.content_list table tr th:nth-child(3){
+    padding: 0px 100px 0px 0px;
+}
+.content_list table tr th:nth-child(4){
+    padding: 0px 100px 0px 0px;
+}
+
+.content_list table{
+    border-bottom: 1px solid black;
+    text-align: left;
+}
+.content_list button{
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 20px;
+    border-style: none;
+}
+
+.bbs_content a:nth-child(1){
+    text-decoration: none;
+    padding-right: 60%;
+}
+.bbs_content a:hover{
+   background-color: aliceblue;
+}
+.page{
+    margin-left: 15%;
+}
+.page a{
+    float: left;
+    display: block;
+    height: 10px;
+    width: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 100px;
+    background-color: rgb(157, 170, 170);
+    color: white;
+    padding: 10px;
+    margin-right: 5px;
+    line-height: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.page a:hover{
+    background-color: rgb(9, 8, 8);
+}
+
+.searchForm{
+    margin-left: 450px;
+    margin-bottom: 30px;
+}
+.searchForm select{
+    border-radius: 20px;
+    height: 30px;
+ 
+}
+.searchForm input{
+    border-radius: 20px;
+    width: 200px;
+    height: 25px;
+    border: 1px solid black;
+
+}
+.searchForm button{
+    color: white;
+    background-color: rgb(0, 94, 255);
+    border: none;
+    border-radius: 20px;
+    width: 50px;
+    height: 30px;
+}
